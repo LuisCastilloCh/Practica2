@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stdlib.h>
+#include<string>
 using namespace std;
 
 //saber el numero a dividir.
@@ -26,7 +27,6 @@ string div_numero(string numero, int n){
 
 int suma(string numero,int n){
 
-
     int suma_total=0;
     string auxiliar_numero="";
 
@@ -36,9 +36,7 @@ int suma(string numero,int n){
         if((au+1)%n==0){
             suma_total+=atoi(auxiliar_numero.c_str());
             auxiliar_numero="";
-
         }
-
     }
 
     return suma_total;

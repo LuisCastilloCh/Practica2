@@ -1,47 +1,44 @@
-#include<iostream>
+#include <iostream>
+#include <string>
+
 using namespace std;
 
-void c_numeros(string c_original){
+void num(string str){
 
-    string  cadena_num="";
-    int posicion=0;
+    string num="";
 
-    for(int au=0;au<=sizeof (c_original);au++){
-        if(isdigit(c_original[au])){
-                cadena_num+=c_original[au];
+    for(int i=0;i<str.size();i++){
+        if(isdigit(str[i])){
+                num+=str[i];
         }
-
     }
-
-    cout<<cadena_num;
+    cout<<num;
 }
 
-void c_letras(string c_original){
+void txt(string str){
 
-    string  cadena_num="";
-    int posicion=0;
+    string txt="";
 
-    for(int au=0;au<=sizeof (c_original);au++){
-        if(isalpha(c_original[au])){
-                cadena_num+=c_original[au];
+    for(int i=0;i<str.size();i++){
+        if(isdigit(str[i])==false){
+                txt+=str[i];
         }
     }
-
-    cout<<cadena_num;
+    cout<<txt;
 }
 
 int main(){
 
-    cout<<"escribe los caracteres: ";
     string cadena;
-    cin>>cadena;
+    cout<<"escribe los caracteres: ";cin>>cadena;
 
     cout<<"original: "<<cadena<<endl;
     cout<<"Texto: ";
-    c_letras(cadena);
+    txt(cadena);
     cout<<" Numero: ";
-    c_numeros(cadena);
+    num(cadena);
 
     return 0;
-
 }
+
+

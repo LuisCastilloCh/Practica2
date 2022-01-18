@@ -80,6 +80,14 @@ bool verificar_filas(int arreglo[],int tamano,int suma_clave){
 
 }
 
+void espacio(int valor){
+    if(valor<10){
+        cout<<" "<<valor;
+    }else{
+        cout<<valor;
+    }
+}
+
 int main(){
     cout<<"ingresa el numero de columnas y filas de tu matriz: ";
     int tamano;
@@ -118,13 +126,13 @@ int main(){
    for(int i=0;i<tamano*tamano;i++){
 
        cout<<"|";
-       cout<<arreglo_principal[i];
+       espacio(arreglo_principal[i]);
        cout<<"|";
 
        if((i+1)%tamano==0){
            cout<<endl;
        }
-   }
+    }
 
    return 0;
 }

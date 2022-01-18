@@ -7,7 +7,7 @@ int main(){
 
     //Problema 3
 
-    char cad[]="";
+    char cad[10];
     int numero;
 
     cout<<"Escribe la cadena 1: ";cin>>cad;

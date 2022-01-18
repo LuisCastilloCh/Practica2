@@ -23,6 +23,8 @@ int convertir_rom_arab(char letra){
     if(letra=='I'){
         return 1;
     }
+
+   return 0;
 }
 
 int saber_indice(string romano_num){

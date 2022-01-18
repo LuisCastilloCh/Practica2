@@ -2,13 +2,26 @@
 
 using namespace std;
 
-void imprimir(int arreglo[]){
-    cout<<" | "<<arreglo[0]<<" | "<<arreglo[1]<<"  | "<<arreglo[2]<<"  | "<<arreglo[3]<<"  | "<<arreglo[4]<<"  | "<<endl;
-    cout<<" | "<<arreglo[5]<<" | "<<arreglo[6]<<"  | "<<arreglo[7]<<"  | "<<arreglo[8]<<"  | "<<arreglo[9]<<"  | "<<endl;
-    cout<<" | "<<arreglo[10]<<" | "<<arreglo[11]<<" | "<<arreglo[12]<<" | "<<arreglo[13]<<" | "<<arreglo[14]<<" | "<<endl;
-    cout<<" | "<<arreglo[15]<<" | "<<arreglo[16]<<" | "<<arreglo[17]<<" | "<<arreglo[18]<<" | "<<arreglo[19]<<" | "<<endl;
-    cout<<" | "<<arreglo[20]<<" | "<<arreglo[21]<<" | "<<arreglo[22]<<" | "<<arreglo[23]<<" | "<<arreglo[24]<<" | "<<endl;
+void espacio(int valor){
+    if(valor<10){
+        cout<<" "<<valor;
+    }else{
+        cout<<valor;
+    }
+}
 
+void imprimir(int arreglo[]){
+    cout<<" | ";espacio(arreglo[0]);cout<<" | ";espacio(arreglo[1]);cout<<" | ";espacio(arreglo[2]);cout<<" | ";espacio(arreglo[3]);cout<<" | ";espacio(arreglo[4]);cout<<" | "<<endl;
+    cout<<"---------------------------"<<endl;
+    cout<<" | ";espacio(arreglo[5]);cout<<" | ";espacio(arreglo[6]);cout<<" | ";espacio(arreglo[7]);cout<<" | ";espacio(arreglo[8]);cout<<" | ";espacio(arreglo[9]);cout<<" | "<<endl;
+    cout<<"---------------------------"<<endl;
+    cout<<" | ";espacio(arreglo[10]);cout<<" | ";espacio(arreglo[11]);cout<<" | ";espacio(arreglo[12]);cout<<" | ";espacio(arreglo[13]);cout<<" | ";espacio(arreglo[14]);cout<<" | "<<endl;
+    cout<<"---------------------------"<<endl;
+    cout<<" | ";espacio(arreglo[15]);cout<<" | ";espacio(arreglo[16]);cout<<" | ";espacio(arreglo[17]);cout<<" | ";espacio(arreglo[18]);cout<<" | ";espacio(arreglo[19]);cout<<" | "<<endl;
+    cout<<"---------------------------"<<endl;
+    cout<<" | ";espacio(arreglo[20]);cout<<" | ";espacio(arreglo[21]);cout<<" | ";espacio(arreglo[22]);cout<<" | ";espacio(arreglo[23]);cout<<" | ";espacio(arreglo[24]);cout<<" | "<<endl;
+
+    cout<<endl;
 }
 void girar_270(int arreglo[], int copia_arreglo[]){
     cout<<"despues de girar 270 grados: "<<endl;
