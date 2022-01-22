@@ -16,40 +16,40 @@ int suma_clave(int arreglo[], int size){
 bool verificar_diagonales(int arreglo[],int tamano,int suma_clave){
     //digonal 1.
     int suma_diagonal_1=0;
-    for(int au=0;au<=(tamano*tamano)-1;au+=tamano+1){
-        suma_diagonal_1+=arreglo[au];
+
+    for(int i=0;i<=(tamano*tamano)-1;i+=tamano+1){
+        suma_diagonal_1+=arreglo[i];
     }
 
     int suma_diagonal_2=0;
-    for(int au=tamano-1;au<=((tamano*tamano)-1)-(tamano-1);au+=(tamano-1)){
-        suma_diagonal_2+=arreglo[au];
+
+    for(int i=tamano-1;i<=((tamano*tamano)-1)-(tamano-1);i+=(tamano-1)){
+        suma_diagonal_2+=arreglo[i];
     }
 
     if(suma_diagonal_2==suma_diagonal_1 and suma_diagonal_1==suma_clave){
         return true;
-    }
-    else{
+    }else{
         return false;
     }
 
 }
 
 bool verificar_columnas(int arreglo[],int tamano,int suma_clave){
+
     int suma_auxiliar=0;
-    for(int au=0;au<tamano;au++){
-        int i=au;
+
+    for(int j=0;j<tamano;j++){
+
+        int i=j;
 
         for(i;i<(tamano*tamano);i+=tamano){
-
             suma_auxiliar+=arreglo[i];
-
         }
 
         if(suma_auxiliar!=suma_clave){
             return false;
-        }
-
-        else{
+        }else{
             suma_auxiliar=0;
         }
     }
@@ -57,28 +57,28 @@ bool verificar_columnas(int arreglo[],int tamano,int suma_clave){
 }
 
 bool verificar_filas(int arreglo[],int tamano,int suma_clave){
+
     int suma_auxiliar=0;
+
     for(int i=0;i<(tamano*tamano);i++){
+
         if((i+1)%(tamano)!=0){
             suma_auxiliar+=arreglo[i];
-        }
+        }else{
 
-        else{
             suma_auxiliar+=arreglo[i];
 
             if(suma_auxiliar!=suma_clave){
                 return false;
-               break;
-            }
-
-         else{
-             suma_auxiliar=0;
+                break;
+            }else{
+                suma_auxiliar=0;
             }
         }
     }
     return true;
-
 }
+
 
 void espacio(int valor){
     if(valor<10){
@@ -91,9 +91,9 @@ void espacio(int valor){
 int main(){
 
     int tamano,posicion=0;
-    int arreglo_principal[(tamano*tamano)];
 
     cout<<"ingresa el numero de columnas y filas de tu matriz: ";cin>>tamano;
+    int arreglo_principal[(tamano*tamano)];
 
     for(int i=1;i<=tamano;i++){
         for(int i=1;i<=tamano;i++){

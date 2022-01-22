@@ -124,19 +124,15 @@ int main(){
     string numero_romano;
     cout<<" ingresa tu numero en romano: ";cin>>numero_romano;
 
-
     int indice_comienzo=saber_indice(numero_romano);
 
     if(indice_comienzo<0){
         cout<<numero_romano<<" en numero arabico es: "<<suma_unidades(numero_romano)<<endl;
     }
-
     else{
         int num_arabe=suma_NO_unidades(indice_comienzo,numero_romano)+suma_unidades(numero_romano);
         cout<<numero_romano<<" en numero arabico es: "<<num_arabe<<endl;
-
     }
-
     return 0;
-
 }
+

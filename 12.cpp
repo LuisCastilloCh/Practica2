@@ -44,24 +44,26 @@ void girar_270(int arreglo[], int copia_arreglo[]){
         arreglo[posicion]=copia_arreglo[i];
         posicion-=5;
     }
+
     posicion=23;
     for(int i=15;i<20;i++){
         arreglo[posicion]=copia_arreglo[i];
         posicion-=5;
     }
+
     posicion=24;
     for(int i=20;i<25;i++){
         arreglo[posicion]=copia_arreglo[i];
         posicion-=5;
     }
-
     imprimir(arreglo);
-
 }
 
 void girar_90(int arreglo[], int copia_arreglo[]){
+
     cout<<"despues de girar 90 grados: "<<endl;
     int posicion=4;
+
     for(int i=0;i<5;i++){
         arreglo[posicion]=copia_arreglo[i];
         posicion+=5;
@@ -86,7 +88,6 @@ void girar_90(int arreglo[], int copia_arreglo[]){
         arreglo[posicion]=copia_arreglo[i];
         posicion+=5;
     }
-
     imprimir(arreglo);
 }
 
@@ -94,6 +95,7 @@ void girar_180(int arreglo[], int copia_arreglo[]){
 
     cout<<"despues de girar 180 grados: "<<endl;
     int posicion=24;
+
     for(int i=0;i<25;i++){
         arreglo[posicion]=copia_arreglo[i];
         posicion-=1;
@@ -112,6 +114,7 @@ int main(){
         arreglo_principal[i]=i+1;
         copia_arreglo_principal[i]=i+1;
     }
+
 
     cout<<"original: "<<endl;
     imprimir(arreglo_principal);

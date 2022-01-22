@@ -18,3 +18,4 @@ int main(){
     cout<<"en una cuadricula "<<numero<<"X"<<numero<<" hay "<<(primer_factorial)/((segundo_factorial)*(segundo_factorial))<<" caminos.";
 
 }
+
