@@ -2,15 +2,15 @@
 #include<cstdlib>
 using namespace std;
 
-int suma_clave(int arreglo[], int tamano){
+int suma_clave(int arreglo[], int size){
 
-   int suma_total=0;
+   int suma=0;
 
-   for(int au=0;au<tamano;au++){
-       suma_total+=arreglo[au];
+   for(int i=0;i<size;i++){
+       suma+=arreglo[i];
    }
 
-   return suma_total;
+   return suma;
 }
 
 bool verificar_diagonales(int arreglo[],int tamano,int suma_clave){
@@ -89,36 +89,30 @@ void espacio(int valor){
 }
 
 int main(){
-    cout<<"ingresa el numero de columnas y filas de tu matriz: ";
-    int tamano;
-    cin>>tamano;
 
+    int tamano,posicion=0;
     int arreglo_principal[(tamano*tamano)];
-    int posicion=0;
-    for(int au=1;au<=tamano;au++){
+
+    cout<<"ingresa el numero de columnas y filas de tu matriz: ";cin>>tamano;
+
+    for(int i=1;i<=tamano;i++){
         for(int i=1;i<=tamano;i++){
-            cout<<"ingrese el elemento, en la fila: "<<au<<" y columna: "<<i<<endl;
             int auxiliar;
-            cin>>auxiliar;
+            cout<<"ingrese el elemento, en la fila: "<<i<<" y columna: "<<i<<endl;cin>>auxiliar;
             arreglo_principal[posicion]=auxiliar;
             posicion++;
         }
     }
 
    int clave_suma=suma_clave(arreglo_principal,tamano);
-
    bool ban_filas=verificar_filas(arreglo_principal,tamano,clave_suma);
    bool ban_columnas=verificar_columnas(arreglo_principal,tamano,clave_suma);
    bool ban_diagonales=verificar_diagonales(arreglo_principal,tamano,clave_suma);
 
-
    if(ban_filas==true and ban_columnas==true and ban_diagonales==true){
        cout<<"tu cuadrado es magico.";
-   }
-   else{
-
-              cout<<"tu cuadrado NO es magico.";
-
+   }else{
+        cout<<"tu cuadrado NO es magico.";
    }
 
    cout<<endl;

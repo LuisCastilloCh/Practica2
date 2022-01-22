@@ -16,7 +16,6 @@ bool compara(string cad1, string cad2){
             ban=false;
             break;
         }
-
     }
 
     if(ban & longitud){
@@ -26,7 +25,6 @@ bool compara(string cad1, string cad2){
         cout<<"no son iguales";
         return false;
     }
-
 }
 
 int main(){
@@ -41,5 +39,4 @@ int main(){
     compara(cadena1, cadena2);
 
     return 0;
-
 }

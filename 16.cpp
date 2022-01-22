@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int main()
-{
-    cout<<"ingrese el numero de tu permutacion: ";
+int main(){
+
     int permutacion;
-    cin>>permutacion;
+    cout<<"ingrese el numero de tu permutacion: ";cin>>permutacion;
+
     int contador_permutacion=0;
     char elementos[10]={'0','1','2','3','4','5','6','7','8','9'};
     char elementos_2[10];
@@ -21,6 +21,7 @@ int main()
                                 for(int h=0;h<10;h++){
                                     for(int i=0;i<10;i++){
                                         for(int j=0;j<10;j++){
+
                                             //saber si la permutacion es valida-------------------
 
                                             elementos_2[0]=a;
@@ -36,13 +37,13 @@ int main()
 
                                             bool ban=true;
 
-                                            for(int au=0;au<10;au++){
+                                            for(int x=0;x<10;x++){
                                                 if(ban==false){
                                                     break;
                                                 }
-                                                for(int au_1=0;au_1<10;au_1++){
-                                                    if(au!=au_1){
-                                                        if(elementos_2[au]==elementos_2[au_1]){
+                                                for(int x1=0;x1<10;x1++){
+                                                    if(x!=x1){
+                                                        if(elementos_2[x]==elementos_2[x1]){
                                                             ban=false;
                                                             break;
                                                         }
@@ -51,6 +52,7 @@ int main()
                                             }
 
                                             if(ban==true){
+
                                                 contador_permutacion++;
 
                                                 if(permutacion==contador_permutacion){
