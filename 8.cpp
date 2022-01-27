@@ -28,7 +28,9 @@ int convertir(char letra){
 }
 
 int saber_indice(string romano_num){
+
     int elementos=romano_num.size();
+
     if(romano_num[elementos-1]=='I' and romano_num[elementos-2]=='I' and romano_num[elementos-3]=='I' and romano_num[elementos-4]=='V' ){
         return elementos-5;
     }
@@ -65,7 +67,9 @@ int saber_indice(string romano_num){
 }
 
 int suma_unidades(string romano_num){
+
     int elementos=romano_num.size();
+
     if(romano_num[elementos-1]=='I' and romano_num[elementos-2]=='I' and romano_num[elementos-3]=='I' and romano_num[elementos-4]=='V' ){
         return 8;
     }
@@ -121,6 +125,7 @@ int suma_NO_unidades(int indice,string num_romano){
 }
 
 int main(){
+
     string numero_romano;
     cout<<" ingresa tu numero en romano: ";cin>>numero_romano;
 

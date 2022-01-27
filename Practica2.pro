@@ -12,4 +12,7 @@ SOURCES += \
         4.cpp \
         6.cpp \
         8.cpp \
+        Ejercicio1.cpp \
+        Ejercicio2.cpp \
+        Ejercicio3.cpp \
         main.cpp
